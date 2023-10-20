@@ -1,0 +1,1 @@
+SELECT alu.nome, cur.nome, cur.turno, cur.sala FROM aluno AS alu INNER JOIN curso AS cur USING(idcurso);
