@@ -11,28 +11,18 @@ CREATE TABLE IF NOT EXISTS curso (
 CREATE TABLE IF NOT EXISTS aluno (
     idaluno NUMBER,
     nome TEXT,
-    idturno NUMBER,
-    idsala NUMBER,
-
-    PRIMARY KEY (idaluno)
-    FOREIGN KEY (idturno) REFERENCES curso (idturno)
-    FOREIGN KEY (idsala) REFERENCES curso (idsala)
-);
-
-CREATE TABLE IF NOT EXISTS aluno_curso (
-    id_aluno_curso NUMBER,
-    idaluno NUMBER,
-    idcurso NUMBER,
-
-    PRIMARY KEY (id_aluno_curso)
-    FOREIGN KEY (idaluno) REFERENCES aluno (idaluno)
+    idcurso TEXT,
+    
     FOREIGN KEY (idcurso) REFERENCES curso (idcurso)
+    PRIMARY KEY (idaluno)
 );
 
 CREATE TABLE IF NOT EXISTS professor (
     idprofessor NUMBER,
     nome TEXT,
-
+    idcurso TEXT,
+    
+    FOREIGN KEY (idcurso) REFERENCES curso (idcurso)
     PRIMARY KEY (idprofessor)
 );
 
