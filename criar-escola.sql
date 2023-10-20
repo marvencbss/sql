@@ -4,7 +4,9 @@ CREATE TABLE IF NOT EXISTS curso (
     nome TEXT,
     turno TEXT,
     sala TEXT,
-
+    idprofessor NUMBER,
+    
+    FOREIGN KEY (idprofessor) REFERENCES professor (idprofessor)
     PRIMARY KEY(idcurso)
 );
 
@@ -31,5 +33,5 @@ CREATE TABLE IF NOT EXISTS professor (
 PRAGMA table_info(curso);
 PRAGMA table_info(aluno);
 PRAGMA table_info(professor);
-PRAGMA table_info(aluno_curso);
+PRAGMA table_info(aluno_turma);
 .output
