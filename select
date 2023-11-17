@@ -1,1 +1,3 @@
 SELECT alu.nome, cur.nome, cur.turno, cur.sala FROM aluno AS alu INNER JOIN curso AS cur USING(idcurso);
+
+UPDATE musics SET idArtist = 1, idAlbum = 2 WHERE i
